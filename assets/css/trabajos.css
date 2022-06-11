@@ -53,6 +53,9 @@ img{
 	text-align: left;
 	transform: rotateY(180deg);
 }
+.flip-card-back{
+    text-align: center;
+}
 .flip-card-back h3{
 	font-size: 30px;
 	color: #ffffff;
@@ -124,14 +127,16 @@ img{
 @media(max-width: 1024px){
     .text{
         margin-top: 50px;
+        text-align: justify;
     }
     .flip-card-back h3{
         font-size: 12px;
+        text-align: center;
     }
     .flip-card-back p{
         font-size: 10px;
         line-height: 1.5;
-        margin-bottom: 20px;
+        margin-bottom: 50px;
     }
     .btnTrabajos{
         font-size: 11px;
@@ -221,7 +226,7 @@ img{
     }
 }
 @media(max-width: 358px){
-    .flip-card-back{
+    .text{
         text-align: center;
     }
     .flip-card-back h3{
