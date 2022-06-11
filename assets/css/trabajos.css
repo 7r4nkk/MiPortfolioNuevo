@@ -144,8 +144,6 @@ img{
 @media(max-width: 425px){
     .flip-main{
         padding: 0px;
-        margin-top: 0px;
-        margin-bottom: 0px;
     }
     .flip-card {
         margin: 10px;
