@@ -73,6 +73,9 @@ header .logo
     opacity: 0.5;
     filter: blur(1.75px);
 }
+.mobileVideo{
+    display: none;
+}
 .overlay
 {
     position: absolute;
@@ -204,4 +207,8 @@ header .logo
     video{
         display: none;
     }
+    .mobileVideo{
+        display: block;
+    }
 }
+

@@ -32,7 +32,7 @@
 }
 
 .text{
-    font-size: 13px;
+    font-size: 15px;
     color: #ffffff;
     line-height: 30px;
     text-align: left;
@@ -97,9 +97,14 @@
 }
 @media screen and (max-width:425px){
     .sobreMi{
-        text-align: center;
         margin-top: 100px;
         margin-bottom: 50px;
+    }
+    .inner-container{
+        padding: 20px;
+    }
+    .text{
+        font-size: 13px;
     }
 }
 @media screen and (max-width:375px){
