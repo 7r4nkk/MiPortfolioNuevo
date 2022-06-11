@@ -5,6 +5,14 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 @keyframes color {
     0% {
         color: #ffffff;
@@ -22,7 +30,9 @@
         color: #ffffff;
     }
 }
-
+body{
+    animation: fade 0.25s ease-in-out;
+}
 
 
 header{
