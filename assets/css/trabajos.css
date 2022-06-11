@@ -71,6 +71,7 @@ img{
     transform: rotateY(180deg);
 }
 .btnTrabajos {
+    text-decoration: none;
     background: linear-gradient(-45deg, #3f00b5, #000a66, #2737c8, #001bb5);
     background-size: 800% 400%;
     padding: 1em 2em;
