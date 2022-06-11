@@ -212,4 +212,7 @@ header .logo
     .showcase,.showcase header{
         padding: 25px;
     }
+    .socialInicio{
+        bottom: 45px;
+    }
 }
