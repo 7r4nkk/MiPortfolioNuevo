@@ -863,6 +863,9 @@ footer .copyright{
     button{
         font-size: 20px;
     }
+    #contacto{
+        padding-top: 50px;
+    }
 }
 @media screen and (max-width:375px){
     .skills{
