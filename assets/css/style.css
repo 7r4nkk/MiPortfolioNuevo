@@ -79,9 +79,8 @@ header{
     z-index: 1;
     background-color: rgba(0, 0, 0, 0.45);
 }
-section{
-    margin: 100px 200px;
-    scroll-behavior: smooth;
+#sobreMi, #trabajos, #contacto{
+    margin-top: 5rem;
 }
 h2{
     text-align: center;
@@ -147,7 +146,7 @@ ul.mostrar{
 
 /* ? ------------------vvvvv----------------INICIO SECTION---------------------vvvvvvv----------- */
 .inicio{
-    margin: 0px 0px 50px 0px;
+    margin: 0px;
 }
 .inicio-imagen{
     background-size: cover;
@@ -180,10 +179,6 @@ video{
     filter: blur(10px);
 }
 .inicio-container{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     text-align: center;
     color: white;
     font-weight: 700;
@@ -191,7 +186,6 @@ video{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
 }
 .inicio-container h1{
     margin: 0;
@@ -231,7 +225,7 @@ a.social:visited{
 }
 .indicator{
     position: relative;
-    top: 375px;
+    top: 175px;
     width: 50px;
     height: 50px;
     transform: rotate(45deg);
@@ -277,10 +271,6 @@ a.social:visited{
 
 
 /* ? ------------------vvvvv----------------SOBRE MI SECTION---------------------vvvvvvv----------- */
-#sobreMi{
-    margin-bottom: 150px;
-    padding-top: 100px;
-}
 .sobreMi{
     display: flex;
     align-items: center;
@@ -327,9 +317,7 @@ a.social:visited{
 
 
 /* ? ------------------vvvvv----------------TRABAJOS SECTION---------------------vvvvvvv----------- */
-#trabajos{
-    padding-top: 100px;
-}
+
 .trabajos h2{
     font-size: 75px;
 }
@@ -431,12 +419,9 @@ img{
 
 
 /* ? ------------------vvvvv----------------CONTACTO SECTION---------------------vvvvvvv----------- */
-#contacto{
-    margin-top: 150px;
-}
 form{
     max-width:420px; 
-    margin:50px auto; 
+    margin:0px auto;
     z-index: 100;
     text-align: center;
     background-color: rgba(0, 0, 0, 0.5);
@@ -559,6 +544,9 @@ footer .copyright{
     .text{
         margin-top: 0px;
     }
+    .indicator{
+        top: 60px
+    }
     .flip-card-back h3{
         font-size: 18px;
     }
@@ -592,8 +580,15 @@ footer .copyright{
     }
 }
 @media(max-width: 1024px){
+    .logonombre{
+        margin-left: 140px;
+        font-size: 30px;
+    }
+    .menu{
+        margin-right: 140px;
+    }
     .indicator{
-        top: 325px;
+        top: 50px;
     }
     .text{
         margin-top: 50px;
@@ -634,6 +629,9 @@ footer .copyright{
     }
 }
 @media screen and (max-width: 850px){
+    #sobreMi, #trabajos, #contacto{
+        margin-top: 10px;
+    }
     h2{
         font-size: 30px;
     }
@@ -700,18 +698,11 @@ footer .copyright{
     .indicator{
         width: 30px;
         height: 30px;
-        top: 360px;
-    }
-    #sobreMi{
-        padding-top: 30px;
-    }
-    #trabajos{
-        padding-top: 50px;
+        top: 50px;
     }
     .flip-main{
         padding: 20px;
         margin-top: 80px;
-        margin-bottom: 50px;
     }
     .flip-card {
         flex: 0 0 calc(100% - 30px);
@@ -765,8 +756,6 @@ footer .copyright{
     }
     .sobreMi{
         text-align: center;
-        margin-top: 100px;
-        margin-bottom: 50px;
     }
     .inner-container{
         padding: 60px;
@@ -820,18 +809,10 @@ footer .copyright{
     ul li{
         width: 35%;
     }
-    
     .indicator{
         width: 35px;
         height: 35px;
-        top: 220px;
-    }
-    #sobreMi{
-        padding-top: 70px;
-    }
-    .sobreMi{
-        margin-top: 100px;
-        margin-bottom: 50px;
+        top: 50px;
     }
     .about-section{
         padding: 10px;
@@ -862,9 +843,6 @@ footer .copyright{
     }
     button{
         font-size: 20px;
-    }
-    #contacto{
-        padding-top: 50px;
     }
 }
 @media screen and (max-width:375px){
