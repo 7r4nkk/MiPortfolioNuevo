@@ -1,9 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+
+/*-----------------------------------------Keyframes--------------------------------------- */
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 @keyframes fade {
     0% {
@@ -30,82 +37,137 @@
         color: #ffffff;
     }
 }
+@keyframes animate{
+    0%{
+        border-color: #fff;
+        transform: translate(0,0);
+    }
+    20%{
+        border-color: #fff;
+        transform: translate(15px,15px);
+    }
+    20.1%,100%{
+        border-color: #222;
+    }
+}
+/*------------------------------------------------------------------------------------------ */
+/*------------------------------------------------------------------------------------------ */
+
+
+/* ? ------------------vvvvv----------------GLOBAL---------------------vvvvvvv----------- */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
 body{
-    animation: fade 0.25s ease-in-out;
+    background-image: linear-gradient(41deg, rgba(107, 107, 107, 0.04) 0%, rgba(107, 107, 107, 0.04) 8%,rgba(31, 31, 31, 0.04) 8%, rgba(31, 31, 31, 0.04) 100%),linear-gradient(9deg, rgba(228, 228, 228, 0.04) 0%, rgba(228, 228, 228, 0.04) 62%,rgba(54, 54, 54, 0.04) 62%, rgba(54, 54, 54, 0.04) 100%),linear-gradient(124deg, rgba(18, 18, 18, 0.04) 0%, rgba(18, 18, 18, 0.04) 37%,rgba(233, 233, 233, 0.04) 37%, rgba(233, 233, 233, 0.04) 100%),linear-gradient(253deg, rgba(201, 201, 201, 0.04) 0%, rgba(201, 201, 201, 0.04) 55%,rgba(47, 47, 47, 0.04) 55%, rgba(47, 47, 47, 0.04) 100%),linear-gradient(270deg, rgba(172, 172, 172, 0.04) 0%, rgba(172, 172, 172, 0.04) 33%,rgba(26, 26, 26, 0.04) 33%, rgba(26, 26, 26, 0.04) 100%),linear-gradient(64deg, rgba(11, 11, 11, 0.04) 0%, rgba(11, 11, 11, 0.04) 38%,rgba(87, 87, 87, 0.04) 38%, rgba(87, 87, 87, 0.04) 100%),linear-gradient(347deg, rgba(199, 199, 199, 0.04) 0%, rgba(199, 199, 199, 0.04) 69%,rgba(4, 4, 4, 0.04) 69%, rgba(4, 4, 4, 0.04) 100%),linear-gradient(313deg, rgba(36, 36, 36, 0.04) 0%, rgba(36, 36, 36, 0.04) 20%,rgba(91, 91, 91, 0.04) 20%, rgba(91, 91, 91, 0.04) 100%),linear-gradient(90deg, rgb(10, 17, 72),rgb(35, 148, 228));
 }
 
 
+/* ? ------------------vvvvv----------------HEADER---------------------vvvvvvv----------- */
 header{
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 40px 100px;
-    z-index: 1000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    position: fixed;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.45);
 }
-header .logo{
-    color: #fff;
-    text-transform: uppercase;
-    cursor: pointer;
+section{
+    margin: 100px 200px;
+    scroll-behavior: smooth;
 }
-.logo a{
-    text-decoration: none;
+h2{
+    text-align: center;
+    font-size: 35px;
 }
-.logo a:visited{
-    color: #fff;
-}
-.toggle{
-    position: relative;
-    width: 60px;
-    height: 60px;
-    background: url(https://i.ibb.co/HrfVRcx/menu.png);
-    background-repeat: no-repeat;
-    background-size: 30px;
-    background-position: center;
-    cursor: pointer;
-}
-.toggle.active{
-    background: url(https://i.ibb.co/rt3HybH/close.png);
-    background-repeat: no-repeat;
-    background-size: 25px;
-    background-position: center;
-    cursor: pointer;
-}
-.showcase{
-    position: absolute;
-    right: 0;
+nav{
+    color: white;
+    height: 75px;
     width: 100%;
-    min-height: 100vh;
-    padding: 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #111;
-    transition: 0.5s;
-    z-index: 2;
 }
-.showcase.active{
-    right: 300px;
+label.logonombre{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+.logonombre{
+    font-size: 35px;
+    font-weight: bold;
+    margin-left: 200px;
+}
+.menu{
+    z-index: 3;
+    list-style: none;
+    font-family: 'Amaranth';
+    font-weight: bold;
+    display: flex;
+    margin-right: 200px;
+}
+.menu li{
+    border-radius: 3px;
+    margin: 0 5px;
+}
+.menu li a{
+    text-decoration: none;
+    color: white;
+    padding: 7px 13px;
+    display: block;
+    font-size: 20px;
+}
+.active{
+    border-bottom: 2px solid #0026ff;
+}
+.menu li:hover{
+    border-bottom: 2px solid #0026ff;
+    transition: .4s;
+}
+.btn_menu{
+    margin-right: 30px;
+    font-size: 30px;
+    display: none;
+}
+ul{
+    align-items: center;
+}
+ul.mostrar{
+    top: 65px;
+    animation: fade .5s ease-in-out;
+} 
 
-.showcase video{
+
+/* ? ------------------vvvvv----------------INICIO SECTION---------------------vvvvvvv----------- */
+.inicio{
+    margin: 0px 0px 50px 0px;
+}
+.inicio-imagen{
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+video{
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: 0.6;
-    filter: blur(1.75px);
-}
-.mobileVideo{
-    display: none;
-}
-.imgBanner{
-    display: none;
+    z-index: -1;
+    filter: blur(7px);
+    opacity: .7;
 }
 .overlay{
     position: absolute;
@@ -115,134 +177,702 @@ header .logo{
     height: 100%;
     background:rgb(1, 0, 85);
     mix-blend-mode: overlay;
+    filter: blur(10px);
 }
-.text{
-    position: relative;
-    z-index: 10;
-}
-
-.text h2{
-    font-size: 5em;
-    font-weight: 800;
-    color: #fff;
-    line-height: 1em;
-    text-transform: uppercase;;
-}
-.text .frontend{
-    font-size: 2em;
+.inicio-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
     font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.inicio-container h1{
+    margin: 0;
+    font-size: 90px;
+    animation: fade 1s ease-in;
+}
+.description{
+    margin: 0px 0 50px 0;
+    display: block;
+    font-size: 30px;
     animation: color 1.75s infinite;
-    line-height: 1em;
-    text-transform: uppercase;
 }
-.text p{
-    font-size: 1.1em;
-    color: #fff;
+.buttonC{
+    max-width: 300px;
+    color: black;
+    padding: 15px 30px;
+    background: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.buttonC:hover{
+    color: blue;
+}
+.socialInicio{
     margin: 20px 0;
-    font-weight: 400;
-    max-width: 700px;
 }
-.text .a{
-    display: inline-block;
-    font-size: 1em;
-    background: #fff;
-    padding: 10px 30px;
-    text-transform: uppercase;
-    text-decoration: none;
-    font-weight: 500;
-    margin-top: 10px;
-    color: #111;
-    letter-spacing: 2px;
-    transition: 0.2s;
+.socialInicio a{
+    font-size: 40px;
+    margin: 20px;
 }
-.text .a:hover{
-    letter-spacing: 6px;
+a i:hover{
+    transition: 1s;
+    transform: scale(1.1);
 }
-.social{
-    position: absolute;
-    z-index: 10;
-    bottom: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 20px 10px 20px;
-}
-.social li{
-    list-style: none;
-}
-.social li a{
-    display: inline-block;
-    margin-right: 20px;
-    transform: scale(0.5);
-    transition: 0.5s;
-}
-.git{
-    filter: invert(1);
-}
-.social li a:hover{
-    transform: scale(0.5) translateY(-15px);
-}
-.menu{
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 300px;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: linear-gradient(90deg, rgb(0,0,0) 0%,transparent 59%),repeating-linear-gradient(45deg, rgba(0,88,255, 0.24) 0px, rgba(0,88,255, 0.24) 1px,transparent 1px, transparent 13px),repeating-linear-gradient(135deg, rgba(0,88,255, 0.24) 0px, rgba(0,88,255, 0.24) 1px,transparent 1px, transparent 13px),linear-gradient(90deg, rgb(0,0,0),rgb(0,0,0));
-    background-size: cover;
-}
-.menu ul{
-    position: relative;
-}
-.menu ul li{
-    list-style: none;
-}
-.menu ul li a{
-    text-decoration: none;
-    font-size: 24px;
+a.social:visited{
     color: rgb(255, 255, 255);
 }
-.menu ul li a:hover{
-    color: #0044ff; 
+.indicator{
+    position: relative;
+    top: 375px;
+    width: 50px;
+    height: 50px;
+    transform: rotate(45deg);
+}
+.indicator span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    box-sizing: border-box;
+    border:none;
+    border-right: 3px solid #fff;
+    border-bottom: 3px solid #fff;
+    animation: animate 1s linear infinite;
+}
+.indicator span:nth-child(1){
+    top: -30px;
+    left: -30px;
+    animation-delay: 0s;
+}
+.indicator span:nth-child(2){
+    top: -15px;
+    left: -15px;
+    animation-delay: .2s;
+}
+.indicator span:nth-child(3){
+    top: 0px;
+    left: 0px;
+    animation-delay: .4s;
+}
+.indicator span:nth-child(4){
+    top: 15px;
+    left: 15px;
+    animation-delay: .6s;
+}
+.indicator span:nth-child(5){
+    top: 30px;
+    left: 30px;
+    animation-delay: .8s;
 }
 
-@media (max-width: 991px){
-    .showcase,.showcase header{
-    padding: 40px;
+
+/* ? ------------------vvvvv----------------SOBRE MI SECTION---------------------vvvvvvv----------- */
+#sobreMi{
+    margin-bottom: 150px;
+    padding-top: 100px;
+}
+.sobreMi{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 0 60px
+}
+
+.about-section{
+    background: url(../img/IMG_20220609_193854.jpg) no-repeat;
+    background-size:contain;
+    overflow: hidden;
+    padding: 60px 60px;
+    border-radius: 5px;
+}
+
+.inner-container{
+    width: 75.5%;
+    float: right;
+    background-color: rgb(0, 0, 0);
+    padding: 150px;
+    box-shadow: 0px 5px 5px rgba(0,0,0,0.25);
+    border-radius: 5px;
+}
+
+.inner-container h1{
+    color: white;
+    margin-bottom: 30px;
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.text{
+    font-size: 15px;
+    color: #ffffff;
+    line-height: 30px;
+    text-align: left;
+    margin-bottom: 40px;
+}
+
+.skills{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* ? ------------------vvvvv----------------TRABAJOS SECTION---------------------vvvvvvv----------- */
+#trabajos{
+    padding-top: 100px;
+}
+.trabajos h2{
+    font-size: 75px;
+}
+.flip-main{
+    z-index: 102;
+    width: 100%;
+	background-color: #0000007a;
+	padding: 100px 0;
+    border-radius: 5px;
+}
+.container{
+    z-index: 101;
+	margin:auto;
+}
+.row{
+    z-index: 100;
+	display: flex;
+	flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.flip-card{
+    flex:0 0 calc(30% - 30px);
+    margin:0 20px 0px;
+    border-radius: 5px;
+}
+.flip-card-inner{
+	box-shadow: 0 0 10px #001a79;
+	position: relative;
+	transform-style: preserve-3d;
+	transition: all 1s ease;
+}
+img{
+	max-width: 100%;
+	vertical-align: middle;
+    border-radius: 5px;
+}
+.flip-card-front img{
+	width: 100%;
+}
+
+.flip-card-front, .flip-card-back{
+	backface-visibility: hidden;
+}
+.flip-card-back{
+	background-color: #000000;
+	position: absolute;
+	left:0;
+	top:0;
+	padding: 15px;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: left;
+	transform: rotateY(180deg);
+}
+.flip-card-back{
+    text-align: center;
+}
+.flip-card-back h3{
+	font-size: 30px;
+	color: #ffffff;
+	margin:0 0 5px;
+}
+.flip-card-back p{
+	font-size: 16px;
+	color: #e9e9e9;
+	margin:0;
+    margin-bottom: 20px;
+}
+.flip-card:hover .flip-card-inner{
+    transform: rotateY(180deg);
+}
+.btnTrabajos {
+    text-decoration: none;
+    background: linear-gradient(-45deg, #3f00b5, #000a66, #2737c8, #001bb5);
+    background-size: 800% 400%;
+    padding: 1em 2em;
+    display: inline-block;
+    border: none;
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: 700;
+    color: white;
+    transition: all .5s ease-in-out;
+    animation: gradient 10s infinite cubic-bezier(.62, .28, .23, .99) both;
+}
+.btnTrabajos:hover {
+    animation: gradient 3s infinite;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+.btnTrabajos:active {
+    animation: gradient 3s infinite;
+    transform: scale(0.8);
+}
+
+
+/* ? ------------------vvvvv----------------CONTACTO SECTION---------------------vvvvvvv----------- */
+#contacto{
+    margin-top: 150px;
+}
+form{
+    max-width:420px; 
+    margin:50px auto; 
+    z-index: 100;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 5px;
+}
+form h1{
+    margin:0 0 15px;
+    padding:0;
+    font-size: 30px;
+    font-weight: 300;
+    color: #fff;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.4);
+}
+.feedback-input {
+    color:white;
+    font-weight:500;
+    font-size: 18px;
+    border-radius: 5px;
+    line-height: 22px;
+    background-color: transparent;
+    border:2px solid #ffffff;
+    transition: all 0.3s;
+    padding: 13px;
+    margin-bottom: 15px;
+    width:100%;
+    box-sizing: border-box;
+    outline:0;
+}
+.feedback-input:focus{ 
+    border:2px solid #002fff; 
+}
+textarea {
+    height: 150px;
+    line-height: 150%;
+    resize:vertical;
+}
+button{
+    width: 100%;
+    cursor: pointer;
+    background: linear-gradient(-45deg, #3f00b5, #000a66, #2737c8, #001bb5);
+    background-size: 800% 400%;
+    padding: 0.5em 0.5em;
+    display: inline-block;
+    border: none;
+    border-radius: 10px;
+    font-size: 28px;
+    font-weight: 700;
+    color: white;
+    transition: all .5s ease-in-out;
+    animation: gradient 10s infinite cubic-bezier(.62, .28, .23, .99) both;
+}
+button:hover{ 
+    animation: gradient 3s infinite;
+    transform: scale(1.02);
+    cursor: pointer;
+}
+button:active{ 
+    animation: gradient 3s infinite;
+    transform: scale(0.8);
+}
+footer{
+    padding: 40px 0;
+    background-color: #000000;
+}
+footer .socialfooter{
+    text-align: center;
+    padding-bottom: 25px;
+    color: white;
+}
+footer .socialfooter a{
+    font-size: 24px;
+    color: inherit;
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+    display: inline-block;
+    text-align: center;
+    margin: 0 8px;
+    opacity: 0.75;
+}
+footer ul{
+    margin-top: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 0;
+    text-align: center;
+}
+footer ul li{
+    display: inline-block;
+    padding: 0 15px;
+}
+footer ul li a{
+    color: white;
+    text-decoration: none;
+    opacity: 0.8;
+}
+footer ul li a:hover{
+    opacity: 1;
+}
+footer .copyright{
+    margin-top: 20px;
+    text-align: center;
+    font-size: 15px;
+    color: white;
+}
+.fa-linkedin{
+    color: #0a66c2
+}
+
+
+
+/* !------------------------------------------------------------------------------------*/
+/* ! -----------------------------MEDIAQUERIES----------------------------------------- */
+/* !----------------------------------------------------------------------------------- */
+
+@media(max-width: 1440px){
+    .text{
+        margin-top: 0px;
     }
-    .text h2{
-    font-size: 3em;
+    .flip-card-back h3{
+        font-size: 18px;
     }
-    .text h3{
-    font-size: 2em;
+    .flip-card-back p{
+        font-size: 12px;
+        line-height: 1.75;
+        margin-bottom: 10px;
+    }
+    .btnTrabajos{
+        font-size: 16px;
+        padding: 0.5em 1em;
+        margin: 3px;
     }
 }
-@media (max-width: 767px){
+@media screen and (max-width:1200px){
+    .inner-container{
+        padding: 80px;
+    }
+}
+@media screen and (max-width:1025px){
+    .about-section{
+        height: 600px;
+    }
+    .inner-container{
+        width: 55%;
+        width: 66.5%;
+    }
+    .iconSkills{
+        width: 45px;
+        height: 45px;
+    }
+}
+@media(max-width: 1024px){
+    .indicator{
+        top: 325px;
+    }
+    .text{
+        margin-top: 50px;
+        text-align: justify;
+    }
+    .flip-card-back h3{
+        font-size: 12px;
+        text-align: center;
+    }
+    .flip-card-back p{
+        font-size: 10px;
+        line-height: 1.5;
+        margin-bottom: 50px;
+    }
+    .btnTrabajos{
+        font-size: 11px;
+        margin: 0px;
+        
+    }
+}
+@media screen and (max-width:1023px){
+    .sobreMi{
+        margin: 0;
+    }
+    .inner-container{
+        width: 100%;
+        padding: 100px;
+    }
+    .about-section{
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0);
+    }
+}
+@media(max-width: 991px){
+    .flip-card {
+    flex: 0 0 calc(50% - 30px);
+    }
+}
+@media screen and (max-width: 850px){
+    h2{
+        font-size: 30px;
+    }
+    section{
+        margin: 10px;
+    }
+    .logo{
+        margin-left: 15px;
+    }
+    .navbar{
+        height: 65px;
+    }
+    .btn_menu{
+        display: inline-flex;
+    }
+    .menu{
+        position: fixed;
+        width: 100vw;
+        height: calc(100% - 65px);
+        background: whitesmoke;
+        top: -100vh;
+        text-align: center;
+        transition: all .4s;
+        flex-direction: column;
+    }
+    .menu li{
+        margin: 30px 0 0 0;
+        line-height: 30px;
+    }
+    .menu li:hover{
+        background: none;
+    }
+    .menu li a{
+        font-size: 20px;
+        font-weight: bold;
+        display: block;
+        
+    }
+    .menu li a:hover{
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+}
+@media(max-width: 768px){
+    ul{
+        align-items: flex-end;
+    }
+    ul li{
+        background-color: rgba(0, 0, 0, 0.5);
+        width: 20%;
+    }
+    ul.mostrar{
+        background-color: rgba(0, 0, 0, 0);
+    }
+    .logonombre{
+        margin-left: 30px;
+    }
+    .inicio{
+        margin: 0;
+    }
+    .social{
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .indicator{
+        width: 30px;
+        height: 30px;
+        top: 360px;
+    }
+    #sobreMi{
+        padding-top: 30px;
+    }
+    #trabajos{
+        padding-top: 50px;
+    }
+    .flip-main{
+        padding: 20px;
+        margin-top: 80px;
+        margin-bottom: 50px;
+    }
+    .flip-card {
+        flex: 0 0 calc(100% - 30px);
+        margin: 15px;
+    }
+    .text{
+        margin-top: 0px;
+    }
+    .flip-card-back h3{
+        font-size: 30px;
+    }
+    .flip-card-back p{
+        font-size: 20px;
+        line-height: 1.75;
+        margin-bottom: 20px;
+    }
+    .btnTrabajos{
+        font-size: 18px;
+        padding: 0.5em 1em;
+        margin: 5px;
+    }
+}
+@media screen and (max-width: 767px){
     video{
         display: none;
     }
-    .overlay{
-        background:rgba(0, 0, 0, 0.5);
-
-    }
-    .showcase{
-        background: url(../img/imgBanner.jpg) no-repeat;
+    .inicio-imagen{
+        background: url(../img/imgBanner.jpg);
         background-size: cover;
-
-    }
-    .menu{
-        background-image: repeating-linear-gradient(216deg, rgb(0,0,0) 0px, rgb(0,0,0) 19px,transparent 19px, transparent 22px),repeating-linear-gradient(135deg, rgb(0,0,0) 0px, rgb(0,0,0) 19px,transparent 19px, transparent 22px),repeating-linear-gradient(338deg, rgb(0,0,0) 0px, rgb(0,0,0) 19px,transparent 19px, transparent 22px),linear-gradient(90deg, rgb(247, 125, 77),rgb(127, 74, 152));
-
     }
 }
-@media (max-width: 425px){
-    .showcase,.showcase header{
-        padding: 25px;
-    }
-    .socialInicio{
-        bottom: 60px;
+@media screen and (max-width:725px){
+    .iconSkills{
+        width: 40px;
+        height: 40px;
     }
 }
+@media(max-width: 650px){
+    .flip-card-back h3{
+        font-size: 24px;
+    }
+    .flip-card-back p{
+        font-size: 14px;
+        line-height: 1.75;
+        margin-bottom: 20px;
+    }
+}
+@media screen and (max-width:600px){
+    ul li{
+        width: 25%;
+    }
+    .sobreMi{
+        text-align: center;
+        margin-top: 100px;
+        margin-bottom: 50px;
+    }
+    .inner-container{
+        padding: 60px;
+    }
+    .skills{
+        text-align: center;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 20px;
+    }
+}
+@media(max-width: 509px){
+    .flip-card-back h3{
+        font-size: 20px;
+    }
+    .flip-card-back p{
+        font-size: 12px;
+        margin-bottom: 20px;
+    }
+    .btnTrabajos{
+        font-size: 14px;
+        padding: 0.5em 1em;
+        margin: 5px;
+    }
+}
+@media screen and (max-width: 500px){
+    .inicio-container h1{
+        font-size: 60px;
+    }
+    .inicio-container .description{
+        font-size: 20px;
+    }
+}
+@media(max-width: 456px){
+    ul li{
+        width: 30%;
+    }
+    .flip-card-back p{
+        font-size: 11px;
+        margin-bottom: 0px;
+    }
+}
+@media screen and (max-width:425px){
+    .logonombre{
+        font-size: 25px;
+    }
+    ul li{
+        width: 35%;
+    }
+    .indicator{
+        width: 35px;
+        height: 35px;
+        top: 320px;
+    }
+    #sobreMi{
+        padding-top: 70px;
+    }
+    .sobreMi{
+        margin-top: 100px;
+        margin-bottom: 50px;
+    }
+    .about-section{
+        padding: 10px;
+    }
+    .inner-container{
+        padding: 20px;
+    }
+    .text{
+        font-size: 13px;
+    }
+    .flip-main{
+        margin-top: 0;
+        padding: 0px;
+    }
+    .flip-card {
+        margin: 10px;
+    }
+    .text{
+        margin-top: 0px;
+    }
+    .flip-card-back h3{
+        font-size: 16px;
+    }
+    .flip-card-back p{
+        font-size: 12px;
+        line-height: 1.75;
+        margin-bottom: 10px;
+    }
+    button{
+        font-size: 20px;
+    }
+}
+@media screen and (max-width:375px){
+    .skills{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media(max-width: 358px){
+    .text{
+        text-align: center;
+    }
+    .flip-card-back h3{
+        font-size: 25px;
+    }
+    .flip-card-back p{
+        display: none;
+    }
+}
+
