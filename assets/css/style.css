@@ -52,7 +52,22 @@
 }
 /*------------------------------------------------------------------------------------------ */
 /*------------------------------------------------------------------------------------------ */
-
+::-webkit-scrollbar {
+    width: 7px;
+    background: rgba(0, 0, 0, 0.85);
+}
+::-webkit-scrollbar-thumb {
+    background: #0026ff;
+    border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #ff0000;
+}
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.85);
+}
+/*------------------------------------------------------------------------------------------ */
+/*------------------------------------------------------------------------------------------ */
 
 /* ? ------------------vvvvv----------------GLOBAL---------------------vvvvvvv----------- */
 *{
@@ -566,19 +581,6 @@ footer .copyright{
         padding: 80px;
     }
 }
-@media screen and (max-width:1025px){
-    .about-section{
-        height: 600px;
-    }
-    .inner-container{
-        width: 55%;
-        width: 66.5%;
-    }
-    .iconSkills{
-        width: 45px;
-        height: 45px;
-    }
-}
 @media(max-width: 1024px){
     .logonombre{
         margin-left: 140px;
@@ -629,9 +631,6 @@ footer .copyright{
     }
 }
 @media screen and (max-width: 850px){
-    #sobreMi, #trabajos, #contacto{
-        margin-top: 10px;
-    }
     h2{
         font-size: 30px;
     }
