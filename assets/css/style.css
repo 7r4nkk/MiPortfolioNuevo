@@ -214,6 +214,7 @@ video{
     animation: color 1.75s infinite;
 }
 .buttonC{
+    font-size: 25px;
     max-width: 300px;
     color: black;
     padding: 15px 30px;
@@ -223,6 +224,7 @@ video{
 }
 .buttonC:hover{
     color: blue;
+    cursor: pointer;
 }
 .socialInicio{
     margin: 20px 0;
