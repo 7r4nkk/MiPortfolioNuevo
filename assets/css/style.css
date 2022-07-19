@@ -20,6 +20,16 @@
         opacity: 1;
     }
 }
+@keyframes navbar {
+    0% {
+        opacity: 0;
+        top: 0;
+    }
+    100% {
+        opacity: 1;
+        top: 65px;
+    }
+}
 @keyframes color {
     0% {
         color: #ffffff;
@@ -155,7 +165,7 @@ ul{
 }
 ul.mostrar{
     top: 65px;
-    animation: fade .5s ease-in-out;
+    animation: navbar .5s ease-in-out;
 } 
 
 
