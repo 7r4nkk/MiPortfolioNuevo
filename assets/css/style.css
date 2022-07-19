@@ -232,6 +232,10 @@ video{
 .socialInicio a{
     font-size: 40px;
     margin: 20px;
+    
+}
+a i{
+    transition: 1s;
 }
 a i:hover{
     transition: 1s;
