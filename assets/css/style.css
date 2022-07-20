@@ -449,6 +449,9 @@ img{
 
 
 /* ? ------------------vvvvv----------------CONTACTO SECTION---------------------vvvvvvv----------- */
+#contacto{
+    margin-bottom: 30px;
+}
 form{
     max-width:420px; 
     margin:0px auto;
@@ -837,6 +840,9 @@ footer .copyright{
     .text{
         font-size: 13px;
     }
+    .trabajos h2{
+        font-size: 60px;
+    }
     .flip-main{
         margin-top: 0;
         padding: 0px;
@@ -865,8 +871,8 @@ footer .copyright{
     }
 }
 @media(max-width: 358px){
-    .text{
-        text-align: center;
+    .trabajos h2{
+        font-size: 50px;
     }
     .flip-card-back h3{
         font-size: 25px;
