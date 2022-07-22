@@ -91,7 +91,7 @@ function validar(){
 
     } else {
         swal("Consulta enviada", "Gracias por ponerte en contacto conmigo");
-        formulario.reset();
+        
         }
 }
 
