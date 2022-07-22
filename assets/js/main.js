@@ -89,10 +89,7 @@ function validar(){
         });
         return (false);
 
-    } else {
-        swal("Consulta enviada", "Gracias por ponerte en contacto conmigo");
-        
-        }
+    }
 }
 
 
