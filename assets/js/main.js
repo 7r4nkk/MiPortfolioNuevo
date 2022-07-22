@@ -82,9 +82,9 @@ function validar(){
         });
         return (false);
 
-    } else if(nombre.length < 5 || email.length < 10 || consulta.length < 10) {
+    } else if(nombre.length < 5 || email.length < 10 || consulta.length < 15) {
         swal({
-            text: "Parece que alguno de los datos no es correcto, por favor ingresa datos reales",
+            text: "Parece que tus datos no son correctos, por favor ingresa datos reales",
             icon: "warning",
         });
         return (false);
