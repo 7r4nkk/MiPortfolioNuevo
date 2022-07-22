@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.alert{
+    padding: 10px;
+    text-align: center;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    animation: fade;
+    animation-duration: 5s;
+}
+.alert p{
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+a:visited{
+    color: white;
+}
+
+@media (min-width: 1440px){
+    .alert{
+        padding: 25px;
+    }
+    .cEnviada{
+        font-size: 80px;
+    }
+    p{
+        font-size: 30px;
+    }
+    button{
+        max-width: 325px;
+    }
+}
