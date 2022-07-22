@@ -163,12 +163,12 @@
         </section>
 
         <section class="contacto" id="contacto" data-aos="fade-up" data-aos-duration="1000">
-            <form id="form" netlify action="./consultaEnviada.html">
+            <form id="form" netlify action="">
                 <h1>CONTACTO</h1>      
                 <input name="nombre" type="text" class="feedback-input" placeholder="Nombre" id="name"/>   
-                <input name="email" type="text" class="feedback-input" placeholder="Email" id="email" />
+                <input name="email" type="email" class="feedback-input" placeholder="Email" id="email"/>
                 <textarea name="consulta" class="feedback-input" placeholder="Mensaje/Consulta" id="consulta"></textarea>
-                <button type="submit" value="ENVIAR" name="btnEnviar">ENVIAR</button>
+                <button type="submit" value="ENVIAR" name="btnEnviar" id="btn-enviar"  onclick="return validar();">ENVIAR</button>
             </form>
         </section>
     </main>
@@ -181,6 +181,7 @@
     </footer>
     <script src="./assets/js/main.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script>
         AOS.init();
     </script>

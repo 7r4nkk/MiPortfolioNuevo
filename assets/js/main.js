@@ -69,3 +69,31 @@ function scrollActive(){
     })
 }
 window.addEventListener('scroll', scrollActive)
+
+function validar(){
+    let formulario = document.getElementById("form");
+    var nombre = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var consulta = document.getElementById("consulta").value;
+    if(nombre == '' || email == '' || consulta == ''){
+        swal({
+            text: "No ingresaste tus datos...",
+            icon: "warning",
+        });
+        return (false);
+        
+    } else if(nombre.length < 5 || email.length < 10 || consulta.length < 20) {
+        swal({
+            text: "Parece que alguno de los datos no es correcto, por favor ingresa datos reales :)",
+            icon: "warning",
+        });
+        return (false);
+
+    } else {
+        swal("Consulta enviada", "Gracias por ponerte en contacto conmigo");
+        formulario.reset();
+        return (false);
+        }
+}
+
+
