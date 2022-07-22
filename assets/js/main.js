@@ -81,15 +81,12 @@ function validar(){
             icon: "warning",
         });
         return (false);
-
+        
     } else if(nombre.length < 5 || email.length < 10 || consulta.length < 10) {
         swal({
-            text: "Parece que alguno de los datos no es correcto, por favor ingresa datos reales :)",
+            text: "Parece que alguno de los datos no es correcto, por favor ingresa datos reales",
             icon: "warning",
         });
         return (false);
-
     }
 }
-
-
