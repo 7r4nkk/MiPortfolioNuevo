@@ -225,7 +225,6 @@ ul.mostrar {
   top: 65px;
   animation: navbar 0.5s ease-in-out;
 }
-
 /* ? ------------------vvvvv----------------INICIO SECTION---------------------vvvvvvv----------- */
 .inicio {
   margin: 0px;
@@ -300,15 +299,12 @@ video {
   font-size: 40px;
   margin: 20px;
 }
-a i {
-  transition: 1s;
+a img {
+  transition: .5s;
 }
-a i:hover {
-  transition: 1s;
-  transform: scale(1.1);
-}
-a.social:visited {
-  color: rgb(255, 255, 255);
+a img:hover {
+  transition: .5s;
+  transform: scale(1.2);
 }
 .indicator {
   position: relative;
@@ -399,8 +395,12 @@ a.social:visited {
 .skills {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  align-content: center;
 }
-
+.github{
+    filter: invert(1);
+}
 /* ? ------------------vvvvv----------------TRABAJOS SECTION---------------------vvvvvvv----------- */
 
 .trabajos h2 {
@@ -773,6 +773,10 @@ footer .copyright {
     width: 30px;
     height: 30px;
     top: 50px;
+  }
+  .iconSkills {
+    width: 60px;
+    height: 60px;
   }
   .flip-main {
     padding: 20px;
